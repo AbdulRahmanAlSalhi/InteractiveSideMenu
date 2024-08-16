@@ -92,13 +92,13 @@ open class MenuContainerViewController: UIViewController {
 
         navigationMenuTransitionDelegate = MenuTransitioningDelegate(interactiveTransition: interactiveTransition)
 
-        let screenEdgePanRecognizer = UIScreenEdgePanGestureRecognizer(
-            target: navigationMenuTransitionDelegate.interactiveTransition,
-            action: #selector(MenuInteractiveTransition.handlePanPresentation(recognizer:))
-        )
-
-        screenEdgePanRecognizer.edges = .left
-        view.addGestureRecognizer(screenEdgePanRecognizer)
+//        let screenEdgePanRecognizer = UIScreenEdgePanGestureRecognizer(
+//            target: navigationMenuTransitionDelegate.interactiveTransition,
+//            action: #selector(MenuInteractiveTransition.handlePanPresentation(recognizer:))
+//        )
+//
+//        screenEdgePanRecognizer.edges = .left
+//        view.addGestureRecognizer(screenEdgePanRecognizer)
     }
 
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -186,7 +186,13 @@ fileprivate extension MenuContainerViewController {
      Dismisses left side menu.
      */
     func dismissNavigationMenu() {
-        self.dismiss(animated: true, completion: nil)
+        if (self.navigationController == nil){
+            self.dismiss(animated: true, completion: nil)
+        }else{
+            self.navigationController?.popViewController(animated: true);
+        }
+        
+        
         isShown = false
     }
 }
