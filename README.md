@@ -54,6 +54,15 @@ To install using [Carthage](https://github.com/Carthage/Carthage), add the follo
 github "handsomecode/InteractiveSideMenu"
 ```
 
+### Swift Package Manager
+To integrate CalendarKit into your Xcode project using Swift Package Manager, add the following to your `Package.swift` file:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/AbdulRahmanAlSalhi/InteractiveSideMenu.gitt", from: "1.0")
+]
+```
+
 ## Usage
 To implement your side menu you should subclasses the following view controllers: `MenuContainerViewController` and `MenuViewController`
 - `MenuContainerViewController` is the main container that hosts the side menu and content controller
