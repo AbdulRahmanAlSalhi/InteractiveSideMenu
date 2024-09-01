@@ -55,7 +55,7 @@ github "handsomecode/InteractiveSideMenu"
 ```
 
 ### Swift Package Manager
-To integrate CalendarKit into your Xcode project using Swift Package Manager, add the following to your `Package.swift` file:
+To integrate InteractiveSideMenu into your Xcode project using Swift Package Manager, add the following to your `Package.swift` file:
 
 ```swift
 dependencies: [
